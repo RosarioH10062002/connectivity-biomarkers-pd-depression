@@ -91,7 +91,4 @@ This project investigates whether **resting-state functional connectivity (rs-fM
 - NetworkX  
 - fMRIPrep  
 
----
-
-## Repository Structure
 
