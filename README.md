@@ -2,8 +2,6 @@
 
 **Impact Scholars Program – Neuromatch Academy**
 
-🧠 *Neuroimaging · Functional Connectivity · Machine Learning · Parkinson’s Disease*
-
 ---
 
 ## Project Overview
