@@ -1,0 +1,50 @@
+addpath("D:\ISP\Toolbox\BrainNetViewer_20191031")
+savepath
+clear; clc;
+%% LOAD DATA
+root_path = "G:\Mon Drive\M2\Impact Scholar Programme\Preprocessed_data\python_to_matlab";
+data_mat = load(fullfile(root_path, "FC_PD_PDD.mat"));
+name = "FC_PD_PDD";
+pipeline_brainviewer(data_mat,name)
+%size(data_mat.coord)
+%size(data_mat.CM)
+%size(data_mat.labels)
+
+BrainNet
+
+%% PIPELINE
+function pipeline_brainviewer(data_mat,name)
+    create_nodes(data_mat, name)
+    create_edges(data_mat,name)
+end 
+
+%% CREATE NODES 
+function create_nodes(data_mat, name)
+    colors = [ 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3]; % DMN % SAL % FPN
+    sizes = ones(size(data_mat.coord,1),1) * 3;
+    filename = sprintf("data_nodes_%s.node", name);
+    fid = fopen(filename, "w");
+    for i = 1:size(data_mat.coord,1)
+
+        x = data_mat.coord(i,1);
+        y = data_mat.coord(i,2);
+        z = data_mat.coord(i,3);
+
+        label = strtrim(data_mat.labels(i,:));
+        label = strrep(label, ' ', '_');
+        label = strrep(label, '(', '');
+        label = strrep(label, ')', '');
+
+        fprintf(fid, '%d %d %d %d %d %s\n', ...
+            x, y, z, sizes(i), colors(i), label);
+
+    end
+    fclose(fid);
+end 
+
+%% CREATE EDGES 
+function create_edges(data_mat,name)
+    filename = sprintf("data_edges_%s.edge", name);
+    dlmwrite(filename, data_mat.CM, 'delimiter', ' ')
+end 
+
