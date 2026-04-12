@@ -3,9 +3,44 @@ savepath
 clear; clc;
 %% LOAD DATA
 root_path = "G:\Mon Drive\M2\Impact Scholar Programme\Preprocessed_data\python_to_matlab";
+
 data_mat = load(fullfile(root_path, "FC_PD_PDD.mat"));
-name = "FC_PD_PDD";
+name = "FC_PD_PDD.mat";
 pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "FC_CTRL_PDD.mat"));
+name = "FC_CTRL_PDD.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "FC_CTRL_PD.mat"));
+name = "FC_CTRL_PD.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_PD_PDD_VARIABILITY.mat"));
+name = "DC_PD_PDD_VARIABILITY.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_CTRL_PDD_VARIABILITY.mat"));
+name = "DC_CTRL_PDD_VARIABILITY.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_CTRL_PD_VARIABILITY.mat"));
+name = "DC_CTRL_PD_VARIABILITY.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_PD_PDD_MEAN.mat"));
+name = "DC_PD_PDD_MEAN.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_CTRL_PDD_MEAN.mat"));
+name = "DC_CTRL_PDD_MEAN.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "DC_CTRL_PD_MEAN.mat"));
+name = "DC_CTRL_PD_MEAN.mat";
+pipeline_brainviewer(data_mat,name)
+
+
 %size(data_mat.coord)
 %size(data_mat.CM)
 %size(data_mat.labels)
