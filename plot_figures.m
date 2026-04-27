@@ -46,6 +46,22 @@ pipeline_brainviewer(data_mat,name)
 %size(data_mat.labels)
 
 BrainNet
+%% GRANGER CAUSALITY
+root_path = "G:\Mon Drive\M2\Impact Scholar Programme\Preprocessed_data\python_to_matlab";
+
+data_mat = load(fullfile(root_path, "GC_CTRL_PD.mat"));
+name = "GC_CTRL_PD.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "GC_CTRL_PDD.mat"));
+name = "GC_CTRL_PDD.mat";
+pipeline_brainviewer(data_mat,name)
+
+data_mat = load(fullfile(root_path, "GC_PD_PDD.mat"));
+name = "GC_PD_PDD.mat";
+pipeline_brainviewer(data_mat,name)
+
+BrainNet
 
 %% PIPELINE
 function pipeline_brainviewer(data_mat,name)
