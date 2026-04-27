@@ -37,14 +37,6 @@ This project investigates whether **resting-state functional connectivity (rs-fM
   - Non-depressed: GDS < 5
 ---
 
-## Methodology
-
-### Preprocessing
-- Standard fMRI pipelines:
-  - CONN toolbox  
-- Motion correction, nuisance regression, band-pass filtering, normalization  
-- Brain parcellation and ROI time-series extraction  
-
 ## Tools & Libraries
 
 - Python  
