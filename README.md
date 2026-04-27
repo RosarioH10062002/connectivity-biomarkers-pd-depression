@@ -1,6 +1,4 @@
-# Functional Connectivity Biomarkers of Depression in Parkinson’s Disease
-
-**Impact Scholars Program – Neuromatch Academy**
+# Functional Connectivity Biomarkers of Depression in Parkinson’s Disease (Impact Scholars Program – Neuromatch Academy)
 
 ---
 
@@ -37,8 +35,6 @@ This project investigates whether **resting-state functional connectivity (rs-fM
 - **Depression labeling:**
   - Depressed: Geriatric Depression Scale (GDS) ≥ 5  
   - Non-depressed: GDS < 5
-- **Design:** Longitudinal (repeated visits handled to avoid data leakage)
-
 ---
 
 ## Methodology
@@ -48,37 +44,6 @@ This project investigates whether **resting-state functional connectivity (rs-fM
   - CONN toolbox  
 - Motion correction, nuisance regression, band-pass filtering, normalization  
 - Brain parcellation and ROI time-series extraction  
-
-### Feature Extraction
-- Functional connectivity measures:
-  - Pearson correlation  
-  - Phase coherence  
-  - Cross-scale interactions  
-- Graph-based features:
-  - Degree  
-  - Global efficiency  
-  - Modularity  
-- Dimensionality reduction:
-  - PCA  
-  - t-SNE  
-  - UMAP  
-  - Autoencoders  
-
-### Modeling
-- Baseline models:
-  - Logistic Regression  
-  - Support Vector Machines (SVM)  
-- Advanced approaches:
-  - Graph Neural Networks (GNNs)  
-  - Explainable deep learning models  
-
-### Evaluation
-- Balanced accuracy  
-- ROC-AUC  
-- Precision–Recall  
-- Model interpretability using SHAP and attention-based methods  
-
----
 
 ## Tools & Libraries
 
