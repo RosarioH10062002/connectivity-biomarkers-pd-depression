@@ -4,6 +4,12 @@ clear; clc;
 %% LOAD DATA
 root_path = "G:\Mon Drive\M2\Impact Scholar Programme\Preprocessed_data\python_to_matlab";
 
+data_mat = load(fullfile(root_path, "GDS_DMN_final.mat"));
+name = "GDS_DMN_final.mat";
+pipeline_brainviewer(data_mat,name)
+BrainNet
+%% 
+
 data_mat = load(fullfile(root_path, "FC_PD_PDD.mat"));
 name = "FC_PD_PDD.mat";
 pipeline_brainviewer(data_mat,name)
